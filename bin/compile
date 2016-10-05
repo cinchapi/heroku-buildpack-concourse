@@ -29,5 +29,5 @@ cd concourse-server/build/distributions
 sh *bin
 
 # Setup the SCRIPT that is sourced when the dyno is started
-echo "alias concourse=$HOME/concourse-server/build/distributions/concourse-server/bin/concourse" >> $SCRIPT
-echo "perl -pi -e 's/#http_port = 8817/http_port = $PORT/g' $HOME/concourse-server/build/distributions/concourse-server/conf/concourse.prefs" >> $SCRIPT
+echo "export PATH=$PATH:$HOME/concourse-server/build/distributions/concourse-server/bin" >> $SCRIPT
+echo "perl -pi -e 's/#http_port = 8817/http_port = \$PORT/g' $HOME/concourse-server/build/distributions/concourse-server/conf/concourse.prefs" >> $SCRIPT
