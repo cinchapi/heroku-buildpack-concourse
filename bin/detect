@@ -15,8 +15,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-BUILD=$1
-if[ -f "${BUILD}/concourse-server/.installer.sh" ]; then
+BUILD_DIR=$1
+
+if [ -f "${BUILD_DIR}/concourse-server/.installer.sh" ]; then
   echo "Yes" && exit 0
 else
   echo "no" && exit 1
