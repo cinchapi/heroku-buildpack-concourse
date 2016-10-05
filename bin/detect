@@ -16,7 +16,7 @@
 # limitations under the License.
 
 BUILD=$1
-if[ -f "${BUILD}/concourse-server/.installer" ]; then
+if[ -f "${BUILD}/concourse-server/.installer.sh" ]; then
   echo "Yes" && exit 0
 else
   echo "no" && exit 1
